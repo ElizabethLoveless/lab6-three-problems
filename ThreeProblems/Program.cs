@@ -125,7 +125,74 @@ do
 
     Console.WriteLine("You rolled " + rolls + " times and won " + wins + ".");
     Console.WriteLine();
+}
 
+//Exercise 3: Score Report 
+if (choice == 3 || choice 4)
+{
+    Console.Write("Score " + (i + 1) + ": ");
+    scores[i] = Convert.ToInt32(Console.ReadLine());
+}
+int total = 0;
+int highest = scores[0];
+int passing = 0;
+
+    // foreach: adding, comparing, and counting every value
+    foreach (int s in scores)
+    {
+        total +=s;
+        if (s > highest)
+        {
+            highest = s;
+        }
+        if (s >= PASSING_SCORE)
+        { 
+            passing++:
+        } 
+    }
+    // One side is a double so the divsion keeps the decimals 
+    double average = (double)total / scores.Length;
+    Console.Writeline();
+    Console.Writeline("Scores entered: " + scores.Length);    
+    Console.Writeline("Total: " + total);
+    Console.Writeline("Average: " + Math.Round(average, 1)); 
+    Console.Writeline("Highest: " + highest);
+    Console.Writeline("Passing: "+ passing + " of " + score.Length);
+    Console.WriteLine();
+    }
+} while (choice != QUIT_OPTION);
+
+Console.WriteLine("Goodbye. ");
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
         
