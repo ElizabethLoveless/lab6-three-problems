@@ -57,5 +57,110 @@ do
             Console.Write("Score: ");
             score = Convert.ToInt32(Console.ReadLine());
         }
+        // Bands go from top down: The first branch wins 
+        string grade;
+        if (score >= 90)
+        {
+        grade = "A";
+        }
+        else if (score >= 80)
+        {
+        grade = "B";
+         }
+        else if (score >= 70)
+        {
+        grade = "C";
+          }
+        else if (score >= 60)
+        {
+        grade = "D";
+        }
+        else
+        {
+        grade = "F";
+        }
+        Console.WriteLine(score + " earns a " + grade + ".");
+        Console.WriteLine();
     }
-}
+    //Exercise 2: Dice Table (The counter resets on each visit, the dice stay the same)
+    if (choice == 2 || choice == 4)
+    {
+        Console.WriteLine ("=== Exercise 2: The Dice Table ===");
+        int rolls = 0;
+        int wins = 0;
+        string again;
+
+        // do while: the player came to roll, so the body has to run atleast once before you can ask anything.
+    do 
+    {
+        rolls ++;
+        int die1 = rng.Next(1,7);
+        int die2 = rng.Next(1,7);
+        int total = die1 + die2;
+
+        Console.Write ("Roll " + rolls + ": " + die1 + " and " + die2 + ", total " + total + ".");
+
+        // Snake eyes is doubles 
+    if(die1 == 1 && die2 == 1)
+    {
+        Console.Write(" Snake eyes.");
+    }
+    else if (die1 == die2)
+    {
+        Console.Write(" Doubles!");
+    }
+    else if (total == 7 || total == 11)
+    {
+        Console.Write(" A winner.");
+    }
+
+    if (total == 7 || total == 11)
+    {
+        wins++;
+    }
+        Console.WriteLine();
+        Console.Write ("Roll again? (y/n): ");
+        again = Console.ReadLine();
+    } while (again == "y");
+
+    Console.WriteLine("You rolled " + rolls + " times and won " + wins + ".");
+    Console.WriteLine();
+
+
+
+        
+
+
+
+        
+
+
+
+
+
+
+
+            
+
+
+
+
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
